@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity WebGL Player | UnityRawImage</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <!--<div id="gameContainer" style="width: 1080px; height: 1920px"></div>-->
+      <div id="gameContainer" style="width: 100vw; height: 100vh"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">UnityRawImage</div>
+      </div>
+    </div>
+
+    <div id="mask" onclick="HideMask()" style="position:absolute;top:0;right:0; width:100vw;height:100vh">
+      <img src="https://media1.tenor.com/images/3e6382c09e404fdda8af83e47bbf570e/tenor.gif?itemid=3518125" alt="Flowers in Chania" style="width:100vw;height:100vh">
+    </div>
+
+    <script>
+        function HideMask() {
+            var mask = document.getElementById("mask");
+            alert("Yeah!!");
+            mask.style.display = "none";
+        }
+    </script>
+  </body>
+</html>
